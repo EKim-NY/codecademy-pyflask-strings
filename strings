@@ -1,0 +1,16 @@
+# Adding an "else: return False" will halt the function after just one iteration because a True or a False value will be returned. 
+
+# Solution: 
+# Let the FOR loop iterate to the end if no matching letter is found. Then the function will proceed to the next line and read "return False" upon which it will halt. 
+
+def letter_check(word, letter):
+  for character in word:
+    if character == letter:
+      return True
+  return False
+
+print(letter_check("strawberry", "a"))
+print(letter_check("strawberry", "o")) 
+
+
+
