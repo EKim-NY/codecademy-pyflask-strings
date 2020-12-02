@@ -13,4 +13,12 @@ print(letter_check("strawberry", "a"))
 print(letter_check("strawberry", "o")) 
 
 
+# "in" checks if one string is part of another string 
+# "letter" in "word" is a boolean expression 
+
+def contains(big_string, little_string): 
+  return little_string in big_string 
+
+print(contains("watermelon", "melon")) 
+print(contains("watermelon", "berry")) 
 
