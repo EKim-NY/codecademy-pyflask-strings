@@ -42,4 +42,13 @@ print(username_generator("Abe", "Simpson"))
 
 
 
+# Create a temporary password based on the username by shifting the letters right. 
 
+user_username = username_generator("Abe", "Simpson")
+
+def password_generator(username, password = ""): 
+  for index in range(len(username)): 
+    password += (username[index - 1])
+  return password 
+
+print(password_generator(user_username))
