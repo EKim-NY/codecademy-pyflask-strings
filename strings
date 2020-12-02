@@ -22,3 +22,12 @@ def contains(big_string, little_string):
 print(contains("watermelon", "melon")) 
 print(contains("watermelon", "berry")) 
 
+# Find the unique letters that are common to both strings. 
+def common_letters(string_one, string_two): 
+  lst = []
+  for letter in string_one: 
+    if (letter in string_two) and (letter not in lst): 
+      lst.append(letter)
+  return lst 
+      
+print(common_letters('banana', 'cream'))
