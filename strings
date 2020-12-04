@@ -171,3 +171,54 @@ def poem_description(publishing_date, author, title, original_work):
 
 my_beard_description = poem_description(1974, "Shel Silverstein", "My Beard", "\"Where the Sidewalk Ends\"") 
 print(my_beard_description)  
+
+############################################
+# Print poem details on a new line for each poem in the list after formatting. 
+
+highlighted_poems = "Afterimages:Audre Lorde:1997,  The Shadow:William Carlos Williams:1915, Ecstasy:Gabriela Mistral:1925,   Georgia Dusk:Jean Toomer:1923,   Parting Before Daybreak:An Qi:2014, The Untold Want:Walt Whitman:1871, Mr. Grumpledump's Song:Shel Silverstein:2004, Angel Sound Mexico City:Carmen Boullosa:2013, In Love:Kamala Suraiyya:1965, Dream Variations:Langston Hughes:1994, Dreamwood:Adrienne Rich:1987"
+
+print("Original list of poems")
+print(highlighted_poems)
+highlighted_poems_list = highlighted_poems.split(',')
+print('\n')
+
+highlighted_poems_stripped = []
+for poem in highlighted_poems_list: 
+  highlighted_poems_stripped.append(poem.strip(' '))
+
+print(highlighted_poems_stripped)
+print('\n')
+
+highlighted_poems_details = [] 
+
+for poem in highlighted_poems_stripped: 
+  highlighted_poems_details.append(poem.split(':'))
+
+print("Note: Each poem's info is split into three substrings contained inside its own list.")
+print('\n')
+print(highlighted_poems_details)
+
+titles = []
+poets = [] 
+dates = [] 
+
+for poem in highlighted_poems_details: 
+    titles.append(poem[0]) 
+    poets.append(poem[1]) 
+    dates.append(poem[2])
+
+def print_poem(title, poet, date): 
+  poem_details = "The poem {title} was published by {poet} in {date}.".format(title=title, poet=poet, date=date) 
+  return poem_details
+
+
+# Print poem details using the format method or an f-string.
+
+for i in range(len(titles)): 
+  # print(print_poem(titles[i], poets[i], dates[i]))
+  print(f'The poem {titles[i]} was published by {poets[i]} in {dates[i]}.')
+  print('\n')
+
+
+
+
