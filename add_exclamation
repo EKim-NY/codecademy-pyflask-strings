@@ -1,0 +1,15 @@
+# Add exclamation points to the end of word until it is 20 characters long. 
+
+def add_exclamation(word): 
+  if len(word) < 20: 
+    i = len(word)
+    while i != 20: 
+      word += '!'
+      i += 1
+  return word 
+
+print(add_exclamation("Codecademy"))
+# should print Codecademy!!!!!!!!!!
+print(add_exclamation("Codecademy is the best place to learn"))
+# should print Codecademy is the best place to learn
+print(add_exclamation(""))
