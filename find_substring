@@ -1,0 +1,17 @@
+""" Find the substring given the start and end characters exclusive. Use the first occurrences of start and end characters. If the latter don't exist in word, then return word. """ 
+
+def substring_between_letters(word, start, end): 
+  if (start in word) and (end in word): 
+    start_index = word.find(start)
+    # print(start_index)
+    end_index = word.find(end) 
+    # print(end_index)
+    substring = word[(start_index + 1): end_index]
+    return substring 
+  else: 
+    return word 
+
+print(substring_between_letters("apple", "p", "e"))
+# should print "pl"
+print(substring_between_letters("apple", "p", "c"))
+# should print "apple"
