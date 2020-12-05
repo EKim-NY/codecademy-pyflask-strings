@@ -1,0 +1,15 @@
+# Return every other letter in a word. 
+
+def every_other_letter(word): 
+  every_other_ltr = "" 
+  for i in range(len(word)): 
+    if i % 2 == 0: 
+      every_other_ltr += word[i]
+  return every_other_ltr 
+
+print(every_other_letter("Codecademy"))
+# should print Cdcdm
+print(every_other_letter("Hello world!"))
+# should print Hlowrd
+print(every_other_letter(""))
+# should print 
