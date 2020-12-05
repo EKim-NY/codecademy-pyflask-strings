@@ -237,3 +237,16 @@ print(unique_english_letters("mississippi"))
 print(unique_english_letters("Apple"))
 # should print 4
 
+# Count the number of times a character x appears in a string named word. 
+def count_char_x(word, x): 
+  count = 0 
+  for letter in word: 
+    if letter == x: 
+      count += 1
+  return count 
+
+
+print(count_char_x("mississippi", "s"))
+# should print 4
+print(count_char_x("mississippi", "m"))
+# should print 1
