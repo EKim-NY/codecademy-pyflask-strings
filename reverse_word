@@ -2,9 +2,15 @@
 def reverse_string(word): 
   str_length = len(word)
   reversed_word = ""
-  while str_length != 0: 
-    reversed_word += word[str_length - 1]
-    str_length -= 1 
+  # Method using WHILE loop: 
+  # while str_length != 0: 
+  #   reversed_word += word[str_length - 1]
+  #   str_length -= 1 
+
+  # Alternate method using range: 
+  for i in range(str_length -1, -1, -1): 
+    reversed_word += word[i]
+
   return reversed_word 
 
 print(reverse_string("Codecademy"))
