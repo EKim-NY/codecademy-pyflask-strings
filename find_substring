@@ -1,4 +1,4 @@
-""" Find the substring given the start and end characters exclusive. Use the first occurrences of start and end characters. If the latter don't exist in word, then return word. """ 
+""" Find the substring given the start and end characters exclusive. Use the first occurrences of start and end characters. If the latter doesn't exist in word, then return word. """ 
 
 def substring_between_letters(word, start, end): 
   if (start in word) and (end in word): 
