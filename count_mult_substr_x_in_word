@@ -1,0 +1,27 @@
+"""Return the number of times a string x appears in a string named word."""
+
+def count_multi_char_x(word, x): 
+  temp_str = word 
+  index = 0 
+  count = 0 
+
+  while index < len(temp_str): 
+    if x in temp_str:
+      count += 1  
+      index = temp_str.find(x)
+      # Return the index of each new temp_str, not the index of the character from word string. 
+      index += len(x)
+      # Create a shorter string from a slice of the previous temp_str string.  
+      temp_str = temp_str[index:]
+    else: 
+      # Without the ELSE statement and incrementing the index, the WHILE loop runs infinitely if x isn't found in temp_str because there's no way that the index can shift forward. 
+      index += 1
+  # return f'The substring \"{x}\" is found {count} time(s) in \"{word}\".'
+  return count 
+
+
+
+print(count_multi_char_x("mississippi", "iss"))
+# should print 2
+print(count_multi_char_x("apple", "pp"))
+# should print 1
